@@ -1,0 +1,308 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.logo-light {
+    display: block !important;
+}
+.logo-dark {
+    display: none !important;
+}
+body.dark .logo-light {
+    display: none !important;
+}
+body.dark .logo-dark {
+    display: block !important;
+}
+
+:root {
+    --gap: 32px;
+    --theme: rgb(255, 255, 255);
+    --entry: rgb(255, 255, 255);
+    --primary: #334F5C;
+    --secondary: #964c4c;
+    --tertiary: #4c9696;
+    --content: rgb(31, 31, 31);
+    --code-block-bg: rgb(28, 29, 33);
+    --code-bg: rgb(245, 245, 245);
+    --border: rgb(238, 238, 238);
+    --meta: rgb(255, 255, 255);
+    --meta-bg: #964c4c;
+    --tertiary-contrast: rgb(255, 255, 255);
+}
+
+.dark {
+    --theme: #334F5C;
+    --entry: #964c4c;
+    --primary: rgb(218, 218, 219);
+    --secondary: #964c4c;
+    --tertiary: #4c9696;
+    --content: rgb(196, 196, 197);
+    --code-block-bg: rgb(218, 218, 219);
+    --code-bg: rgb(218, 218, 219);
+    --border: rgb(51, 51, 51);
+    --meta: rgb(255, 255, 255);
+    --meta-bg: #964c4c;
+    --tertiary-contrast: rgb(255, 255, 255);
+}
+
+/* Fix theme toggle positioning and add breathing space */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Adjust this value to control spacing between logo and toggle */
+    padding-top: 1rem; /* Add breathing space from top */
+    padding-bottom: 1rem; /* Add breathing space to bottom for balance */
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+}
+
+.logo-switches {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 1rem; /* Adjust this to control distance from logo */
+}
+
+#theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;  /* Set consistent width */
+    height: 40px; /* Set consistent height */
+    padding: 8px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+#theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Ensure the SVG icons are properly sized */
+#theme-toggle svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Override any default nav styling that might be pushing elements apart */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav .logo {
+    flex-shrink: 0; /* Prevent logo area from shrinking */
+}
+
+#menu {
+    margin-left: auto; /* Push menu to the right */
+}
+
+/* Language switcher styling if present */
+.lang-switch {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0.5rem;
+}
+
+.footer,
+.top-link {
+    font-size: 12px;
+    color: var(--primary);
+}
+
+.footer a:hover,
+.top-link:hover {
+    color: var(--secondary);
+}
+
+.button {
+    color: var(--meta);
+    background: var(--meta-bg);
+    border-radius: var(--radius);
+    margin: 8px;
+    padding: 6px;
+    transition: transform 0.1s;
+}
+
+.entry-content {
+    color: var(--primary);
+}
+
+.entry-footer {
+    color: var(--tertiary);
+    font-size: 13px;
+}
+
+.post-meta {
+    color: var(--meta);
+    background: var(--meta-bg);
+    padding: 0 8px;
+    border-radius: var(--radius);
+    display: inline-block;
+    font-size: 13px;
+}
+
+.post-content {
+    color: var(--primary);
+}
+
+.post-tags a:hover {
+    color: var(--theme);
+    background: var(--tertiary);
+}
+
+sup.archive-count {
+    color: var(--meta);
+    background: var(--meta-bg);
+    padding: 0 8px;
+    border-radius: var(--radius);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    vertical-align: middle;
+    height: 15px;
+    min-width: 15px;
+    line-height: 1;
+}
+
+.top-link {
+    background: var(--secondary);
+}
+
+.top-link:hover {
+    color: var(--theme);
+}
+
+.paginav a {
+    color: var(--secondary);
+}
+
+.paginav a:hover {
+    color: var(--tertiary-contrast);
+    background: var(--tertiary);
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.popup-content {
+    background: var(--code-bg);
+    margin: 8% auto;
+    padding: 0;
+    width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #666;
+    font-weight: 300;
+    line-height: 1;
+    border: none;
+    background: none;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close:hover {
+    color: #333;
+}
+
+.popup-content h2 {
+    margin: 0;
+    padding: 24px 24px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.popup-content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.popup-content li {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.popup-content li:last-child {
+    border-bottom: none;
+}
+
+.popup-content li a {
+    display: flex;
+    align-items: center;
+    padding: 18px 24px;
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    position: relative;
+}
+
+.popup-content li a:hover {
+    background-color: #f8f9fa;
+}
+
+.popup-content li a::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    margin-right: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.7;
+}
+
+/* Icons for each contact method */
+.popup-content li:nth-child(1) a::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z'/%3E%3Cpolyline points='22,6 12,13 2,6'/%3E%3C/svg%3E");
+}
+
+.popup-content li:nth-child(2) a::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z'/%3E%3Crect x='2' y='9' width='4' height='12'/%3E%3Ccircle cx='4' cy='4' r='2'/%3E%3C/svg%3E");
+}
+
+.popup-content li:nth-child(3) a::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='2' y='3' width='20' height='14' rx='2' ry='2'/%3E%3Cline x1='8' y1='21' x2='16' y2='21'/%3E%3Cline x1='12' y1='17' x2='12' y2='21'/%3E%3C/svg%3E");
+}
+
+.popup-content li:nth-child(4) a::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 19c-5 0-8-3-8-8s3-8 8-8 8 3 8 8-3 8-8 8Z'/%3E%3Cpath d='M8 14s1.5 2 4 2 4-2 4-2'/%3E%3Cline x1='9' y1='9' x2='9.01' y2='9'/%3E%3Cline x1='15' y1='9' x2='15.01' y2='9'/%3E%3C/svg%3E");
+}

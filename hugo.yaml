@@ -1,0 +1,90 @@
+baseURL: "https://diractions.eu"
+languageCode: en-us
+title: Diractions Consulting - Harald Hagenaars
+theme: PaperMod
+
+ignoreLogs: 'warning-goldmark-raw-html'
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+    env: production
+    title: "Diractions Consulting"
+    keywords: [Blog, Portfolio, Services]
+    # author: "Harald Hagenaars"
+    defaultTheme: dark
+    disableThemeToggle: false
+    ShowReadingTime: true # to show reading time at bottom of each post
+    ShowShareButtons: false # to show Share Buttons at bottom of each post
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: true # adds BreadCrumb Navigation above Post's Title to show subsections and Navigation to Home
+    ShowCodeCopyButtons: false
+    ShowWordCount: false
+    ShowRssButtonInSectionTermList: true
+    UseHugoToc: true
+    disableSpecial1stPost: false
+    disableScrollToTop: false
+    comments: false
+    hidemeta: false
+    hideSummary: false
+    showtoc: true
+    tocopen: true
+
+    profileMode:
+      enabled: true
+      title: "Harald Hagenaars" # optional default will be site title
+      subtitle: "I help organizations turn emerging technologies into business value — through aligned roadmaps, partnerships, and scalable innovation ecosystems."
+      imageUrl: "/images/harald.png" # optional
+      imageTitle: "Profile photo of Harald" # optional
+      imageWidth: 200 # custom size
+      imageHeight: 200 # custom size
+      buttons:
+        - name: View My Work
+          url: "/projects/"
+        - name: Get In Touch
+          url: "#popup"
+  
+    socialIcons:
+      - name: github
+        url: "https://github.com/"
+      - name: linkedin
+        url: "https://www.linkedin.com/"
+
+    analytics:
+      google:
+        SiteVerificationTag: "XYZabc"
+
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 10
+    - identifier: services
+      name: Services
+      url: /services/
+      weight: 20
+    - identifier: projects
+      name: Projects
+      url: /projects/
+      weight: 30
+    - identifier: faq
+      name: FAQ
+      url: /faq/
+      weight: 40
+    - identifier: archives
+      name: Archives
+      url: /archives/
+      weight: 50
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
