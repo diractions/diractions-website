@@ -52,13 +52,9 @@ params:
   
     socialIcons:
       - name: github
-        url: "https://github.com/"
+        url: "https://github.com/diractions"
       - name: linkedin
-        url: "https://www.linkedin.com/"
-
-    analytics:
-      google:
-        SiteVerificationTag: "XYZabc"
+        url: "https://www.linkedin.com/in/haraldhagenaars"
 
 menu:
   main:
@@ -78,10 +74,14 @@ menu:
       name: FAQ
       url: /faq/
       weight: 40
+    - identifier: blog
+      name: Blog
+      url: /posts/
+      weight: 50
     - identifier: archives
       name: Archives
       url: /archives/
-      weight: 50
+      weight: 60
 
 outputs:
   home:

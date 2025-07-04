@@ -15,17 +15,28 @@ body.dark .logo-dark {
     display: block !important;
 }
 
+/* 
+    Override PaperMod theme: Remove forced min-height on profile section
+    This ensures the .profile block inside .main only takes up as much space as its content,
+    allowing sections like "Recent Posts" to appear directly below without extra vertical space.
+*/
+.main .profile {
+    min-height: unset !important;
+}
+
+/* Override PaperMod theme colors */
+/* This is to ensure the theme colors are consistent with the new design */
 :root {
     --gap: 32px;
-    --theme: rgb(255, 255, 255);
-    --entry: rgb(255, 255, 255);
+    --theme: #e3e3e3;
+    --entry: #e3e3e3;
     --primary: #334F5C;
     --secondary: #964c4c;
     --tertiary: #4c9696;
     --content: rgb(31, 31, 31);
     --code-block-bg: rgb(28, 29, 33);
     --code-bg: rgb(245, 245, 245);
-    --border: rgb(238, 238, 238);
+    --border: #964c4c;
     --meta: rgb(255, 255, 255);
     --meta-bg: #964c4c;
     --tertiary-contrast: rgb(255, 255, 255);
@@ -34,15 +45,15 @@ body.dark .logo-dark {
 .dark {
     --theme: #334F5C;
     --entry: #964c4c;
-    --primary: rgb(218, 218, 219);
+    --primary: #e3e3e3;
     --secondary: #964c4c;
     --tertiary: #4c9696;
     --content: rgb(196, 196, 197);
     --code-block-bg: rgb(218, 218, 219);
     --code-bg: rgb(218, 218, 219);
-    --border: rgb(51, 51, 51);
-    --meta: rgb(255, 255, 255);
-    --meta-bg: #964c4c;
+    --border: #e3e3e3;
+    --meta-bg: #e3e3e3;
+    --meta: #964c4c;
     --tertiary-contrast: rgb(255, 255, 255);
 }
 
@@ -142,8 +153,25 @@ body.dark .logo-dark {
 }
 
 .entry-footer {
-    color: var(--tertiary);
+    color: var(--meta);
+    background: var(--meta-bg);
+    padding: 0 8px;
+    border-radius: var(--radius);
+    display: inline-block;
     font-size: 13px;
+}
+
+.post-entry {
+    transition:
+        transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.2s,
+        border-width 0.2s;
+}
+
+.post-entry:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 4px 16px rgba(169, 68, 66, 0.15);
+    border-width: 3px;
 }
 
 .post-meta {
@@ -162,6 +190,15 @@ body.dark .logo-dark {
 .post-tags a:hover {
     color: var(--theme);
     background: var(--tertiary);
+}
+
+.archive-meta {
+    color: var(--meta);
+    background: var(--meta-bg);
+    padding: 0 8px;
+    border-radius: var(--radius);
+    display: inline-block;
+    font-size: 13px;
 }
 
 sup.archive-count {
@@ -199,54 +236,35 @@ sup.archive-count {
 .popup {
     display: none;
     position: fixed;
+    z-index: 9999;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(2px);
 }
 
 .popup-content {
-    background: var(--code-bg);
-    margin: 8% auto;
-    padding: 0;
-    width: 350px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     position: relative;
-}
-
-.close {
-    position: absolute;
-    top: 16px;
-    right: 20px;
-    cursor: pointer;
-    font-size: 24px;
-    color: #666;
-    font-weight: 300;
-    line-height: 1;
-    border: none;
-    background: none;
-    padding: 0;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.close:hover {
-    color: #333;
+    background: white;
+    width: 100%;
+    max-width: 400px;
+    margin: 8% auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 .popup-content h2 {
     margin: 0;
-    padding: 24px 24px 20px;
+    padding: 24px;
     font-size: 18px;
     font-weight: 600;
     color: #1a1a1a;
     border-bottom: 1px solid #f0f0f0;
+    text-align: left;
 }
 
 .popup-content ul {
@@ -265,44 +283,120 @@ sup.archive-count {
 
 .popup-content li a {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    gap: 16px;
     padding: 18px 24px;
     text-decoration: none;
     color: #1a1a1a;
     font-size: 14px;
     font-weight: 500;
-    transition: background-color 0.2s ease;
-    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-left: 3px solid transparent;
 }
 
 .popup-content li a:hover {
-    background-color: #f8f9fa;
+    background-color: #f0f4f8;
+    transform: translateX(4px);
+    border-left: 3px solid #334F5C;
+    padding-left: 21px;
+}
+
+.popup-content li a:hover::before {
+    opacity: 1;
+    transform: scale(1.1);
 }
 
 .popup-content li a::before {
     content: '';
+    flex-shrink: 0;
     width: 20px;
     height: 20px;
-    margin-right: 16px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0.7;
+    margin-top: 2px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.popup-content li .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+    align-items: flex-start; /* Ensure left alignment */
+}
+
+.popup-content li .contact-info span {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #1a1a1a;
+}
+
+.popup-content li a:hover .contact-info span {
+    color: #334F5C;
+    font-weight: 700;
+}
+
+.popup-content li .contact-info p {
+    margin: 0;
+    color: #666;
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+.popup-content li a:hover .contact-info p {
+    color: #4a4a4a;
+}
+
+.popup-content .close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-size: 22px;
+    color: #999;
+    background: none;
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.popup-content .close:hover {
+    color: #333;
+    background-color: #f0f0f0;
 }
 
 /* Icons for each contact method */
+/* Email */
 .popup-content li:nth-child(1) a::before {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z'/%3E%3Cpolyline points='22,6 12,13 2,6'/%3E%3C/svg%3E");
 }
 
+/* LinkedIn */
 .popup-content li:nth-child(2) a::before {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z'/%3E%3Crect x='2' y='9' width='4' height='12'/%3E%3Ccircle cx='4' cy='4' r='2'/%3E%3C/svg%3E");
 }
 
+/* Instagram */
 .popup-content li:nth-child(3) a::before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='2' y='3' width='20' height='14' rx='2' ry='2'/%3E%3Cline x1='8' y1='21' x2='16' y2='21'/%3E%3Cline x1='12' y1='17' x2='12' y2='21'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='2' y='2' width='20' height='20' rx='5' ry='5'/%3E%3Cpath d='m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z'/%3E%3Cline x1='17.5' y1='6.5' x2='17.51' y2='6.5'/%3E%3C/svg%3E");
 }
 
+/* GitHub */
 .popup-content li:nth-child(4) a::before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 19c-5 0-8-3-8-8s3-8 8-8 8 3 8 8-3 8-8 8Z'/%3E%3Cpath d='M8 14s1.5 2 4 2 4-2 4-2'/%3E%3Cline x1='9' y1='9' x2='9.01' y2='9'/%3E%3Cline x1='15' y1='9' x2='15.01' y2='9'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22'/%3E%3C/svg%3E");
+}
+
+/* Buy Me A Coffee */
+.popup-content li:nth-child(5) a::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 8h1a4 4 0 0 1 0 8h-1'/%3E%3Cpath d='M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z'/%3E%3Cline x1='6' y1='1' x2='6' y2='4'/%3E%3Cline x1='10' y1='1' x2='10' y2='4'/%3E%3Cline x1='14' y1='1' x2='14' y2='4'/%3E%3C/svg%3E");
 }
