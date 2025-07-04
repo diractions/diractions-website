@@ -10,3 +10,24 @@
     </ul>
   </div>
 </div>
+
+<script>
+// Close the popup when the user clicks outside the popup content
+// Add a click event listener that fires every time anywhere on the page is clicked
+document.addEventListener('click', function(event) {
+  const popup = document.getElementById('contact-popup');
+  
+  // Check if the popup exists and the user clicked on the backdrop itself
+  if (popup && event.target === popup) {
+    popup.style.display = 'none'; // Hide the popup
+  }
+});
+
+// Close the popup when the user presses the Escape key
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    const popup = document.getElementById('contact-popup');
+    if (popup) popup.style.display = 'none'; // Hide the popup
+  }
+});
+</script>
