@@ -2,6 +2,9 @@
 title: "FAQ"
 date: 2025-07-04T01:59:58
 draft: false
+hideMeta: true
+showtoc: true
+ShowBreadCrumbs: false
 ---
 
 ## What makes your background unique compared to other technology leaders?

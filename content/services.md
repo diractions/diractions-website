@@ -3,6 +3,8 @@ title: "Services"
 date: 2025-06-30
 draft: false
 showtoc: false
+ShowBreadCrumbs: false
+hideMeta: true
 ---
 
 Here’s HOW I support innovation efforts that aim for real-world adoption and lasting value:

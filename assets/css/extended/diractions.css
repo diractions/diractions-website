@@ -28,6 +28,7 @@ body.dark .logo-dark {
 /* This is to ensure the theme colors are consistent with the new design */
 :root {
     --gap: 32px;
+    --main-width: 1024px;
     --theme: #e3e3e3;
     --entry: #e3e3e3;
     --primary: #334F5C;
@@ -148,8 +149,21 @@ body.dark .logo-dark {
     transition: transform 0.1s;
 }
 
-.entry-content {
-    color: var(--primary);
+.entry-cover {
+    /* Use negative margins to counteract the parent's padding */
+    margin-top: -14px;
+    margin-left: -14px;
+    margin-right: -14px;
+    margin-bottom: 15px; /* Adds space between the image and the title below */
+}
+
+.entry-cover img {
+    /* Make the image fill its new, wider container */
+    width: 100%;
+    
+    /* Round the top corners of the image to match the card's border-radius */
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
 }
 
 .entry-footer {
@@ -162,16 +176,41 @@ body.dark .logo-dark {
 }
 
 .post-entry {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     transition:
         transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
         box-shadow 0.2s,
         border-width 0.2s;
 }
 
+.post-entry .entry-content {
+    flex-grow: 1;
+}
+
+.post-entry .entry-footer {
+    margin-top: auto;
+
+    color: var(--meta);
+    background: var(--meta-bg);
+    padding: 0 8px;
+    border-radius: var(--radius);
+    display: inline-block;
+    font-size: 13px;
+}
+
 .post-entry:hover {
     transform: translateY(-6px);
     box-shadow: 0 4px 16px rgba(169, 68, 66, 0.15);
     border-width: 3px;
+}
+
+/* Ensure first entry doesn't get special treatment in grid */
+.first-entry {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .post-meta {
@@ -190,6 +229,24 @@ body.dark .logo-dark {
 .post-tags a:hover {
     color: var(--theme);
     background: var(--tertiary);
+}
+
+/*
+ * 3-Column Post Grid
+ */
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* On screens wider than 768px, display posts in 3 columns */
+@media (max-width: 768px) {
+    .posts-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
 }
 
 .archive-meta {

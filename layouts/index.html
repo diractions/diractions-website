@@ -36,12 +36,14 @@
 </div>
 {{- end }}
 
+<!-- Posts Grid Container -->
+<div class="posts-grid">
 {{- range $index, $page := $paginator.Pages }}
 
 {{- $class := "post-entry" }}
 
 {{- $user_preferred := or site.Params.disableSpecial1stPost site.Params.homeInfoParams.Title site.Params.profileMode.enabled }}
-{{- if (and $.IsHome (eq $index 0) (not $user_preferred)) }}
+{{- if (and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) (not $user_preferred)) }}
 {{- $class = "first-entry" }}
 {{- else if $page.Weight }}
 {{- $class = "post-entry tag-entry" }}
@@ -71,6 +73,7 @@
     <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
 </article>
 {{- end }}
+</div>
 
 {{- if gt $paginator.TotalPages 1 }}
 <footer class="page-footer">

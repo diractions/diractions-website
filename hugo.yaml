@@ -40,15 +40,17 @@ params:
       enabled: true
       title: "Harald Hagenaars" # optional default will be site title
       subtitle: "I help organizations turn emerging technologies into business value — through aligned roadmaps, partnerships, and scalable innovation ecosystems."
-      imageUrl: "/images/harald.png" # optional
+      imageUrl: "/images/harald_suit.png" # optional
       imageTitle: "Profile photo of Harald" # optional
       imageWidth: 200 # custom size
-      imageHeight: 200 # custom size
+      imageHeight: 267 # custom size
       buttons:
+        - name: Let's Talk
+          url: "https://outlook.office.com/bookwithme/user/7707e0a792da45c09c4ad255ec9e7fc8%40diractions.eu/meetingtype/1xCPAXDW9EyvUoRqSIpMDA2?anonymous&ismsaljsauthenabled=true"
+        - name: Connect with Me
+          url: "#popup"
         - name: View My Work
           url: "/projects/"
-        - name: Get In Touch
-          url: "#popup"
   
     socialIcons:
       - name: github
