@@ -23,7 +23,7 @@ params:
     ShowReadingTime: true # to show reading time at bottom of each post
     ShowShareButtons: false # to show Share Buttons at bottom of each post
     ShowPostNavLinks: true
-    ShowBreadCrumbs: true # adds BreadCrumb Navigation above Post's Title to show subsections and Navigation to Home
+    ShowBreadCrumbs: false # adds BreadCrumb Navigation above Post's Title to show subsections and Navigation to Home
     ShowCodeCopyButtons: false
     ShowWordCount: false
     ShowRssButtonInSectionTermList: true
