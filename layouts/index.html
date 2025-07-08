@@ -66,9 +66,14 @@
     </div>
     {{- end }}
     {{- if not (.Param "hideMeta") }}
+    <!-- Use the collapsible tags partial -->
+    {{- partial "collapsible_tags.html" (dict "page" $page "maxVisible" 3) }}
+
+    <!-- Other Metadata Row -->
     <footer class="entry-footer">
-        {{- partial "post_meta.html" . -}}
+        {{- partial "post_meta_card.html" . -}}
     </footer>
+
     {{- end }}
     <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
 </article>

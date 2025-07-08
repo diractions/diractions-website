@@ -1,0 +1,56 @@
+/* Entry tags styling - separate row */
+.entry-tags {
+    padding: 0 1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    position: relative;
+}
+
+.entry-tags .tag-link {
+    color: var(--meta);
+    background: var(--tertiary);
+    padding: 4px 8px;
+    border-radius: var(--radius);
+    font-size: 12px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.entry-tags .tag-link:hover {
+    color: var(--tertiary-contrast);
+    background: var(--secondary);
+    transform: translateY(-1px);
+}
+
+/* Collapsible tags functionality - dynamically controlled by JS */
+.entry-tags .more-tags {
+    color: var(--meta);
+    background: var(--tertiary);
+    padding: 4px 8px;
+    border-radius: var(--radius);
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    border: none;
+    font-family: inherit;
+}
+
+.entry-tags .more-tags:hover {
+    color: var(--tertiary-contrast);
+    background: var(--secondary);
+    transform: translateY(-1px);
+}
+
+/* JavaScript will handle the hiding/showing of tags */
+.entry-tags .tag-link.hidden {
+    display: none;
+}
+
+.entry-tags .more-tags.hidden {
+    display: none;
+}

@@ -1,7 +1,10 @@
 ---
 title: "Common Pitfalls When Integrating LLMs Into Business Workflows"
 date: 2025-06-29
-tags: ["LLM", "AI", "Workflow_Automation"]
+tags:
+  - LLM
+  - GenAI
+  - Workflow-Automation
 draft: false
 hideMeta: false
 showtoc: false

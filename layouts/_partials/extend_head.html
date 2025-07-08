@@ -1,0 +1,16 @@
+{{- /* Head custom content area start */ -}}
+{{- /*     Insert any custom code (web-analytics, resources, etc.) - it will appear in the <head></head> section of every page. */ -}}
+{{- /*     Can be overwritten by partial with the same name in the global layouts. */ -}}
+{{- /* Head custom content area end */ -}}
+
+<!-- Extended global styles required for partials/shortcodes -->
+{{ $global_styles := slice "card_tags.css" "builtin_icon.css" "social_popup.css" }}
+{{ range $global_styles }}
+  {{ with resources.Get (printf "css/extended/%s" .) }}
+    {{ $style := . | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" as="style">
+  {{ else }}
+    {{ errorf "Failed to find extended global style %s" . }}
+  {{ end }}
+{{ end }}
+<!-- /Extended global styles -->

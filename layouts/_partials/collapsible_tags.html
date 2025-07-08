@@ -1,0 +1,28 @@
+{{/* layouts/partials/collapsible_tags.html */}}
+{{/* 
+Usage: {{ partial "collapsible_tags.html" . }}
+Optional parameters:
+- maxVisible: maximum number of tags to show before collapsing (default: 3)
+- showOnMobile: maximum number of tags to show on mobile (default: 2)
+*/}}
+
+{{- $maxVisible := .maxVisible | default 3 }}
+{{- $showOnMobile := .showOnMobile | default 2 }}
+{{- $page := .page | default . }}
+
+{{- if $page.Params.tags }}
+{{- $tagCount := len $page.Params.tags }}
+<div class="entry-tags{{ if gt $tagCount $maxVisible }} collapsed{{ end }}" 
+     data-total-tags="{{ $tagCount }}" 
+     data-max-visible="{{ $maxVisible }}"
+     data-mobile-visible="{{ $showOnMobile }}">
+    {{- range $page.Params.tags }}
+    <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/" class="tag-link">{{ . }}</a>
+    {{- end }}
+    {{- if gt $tagCount $maxVisible }}
+    <button class="more-tags" onclick="toggleTags(this)">
+        +{{ sub $tagCount $maxVisible }}
+    </button>
+    {{- end }}
+</div>
+{{- end }}

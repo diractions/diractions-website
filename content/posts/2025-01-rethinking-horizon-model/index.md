@@ -1,12 +1,13 @@
 ---
-title: "Rethinking the Horizon model? Here is what I tell clients"
+title: Rethinking the Horizon model? Here is what I tell clients
+summary: How to move from early-stage innovation to business impact faster—without skipping the work. A practical take on using the Three Horizons model today.
 date: 2025-01-15
 tags: 
-  - Horizon_Planning
-  - Growth_Strategy
-  - Innovation_Management
+  - Growth-Strategy
+  - Innovation-Management
 draft: false
 hideMeta: false
+hideSummary: false
 showtoc: false
 ShowBreadCrumbs: false
 cover:
@@ -87,3 +88,13 @@ The goal is to keep momentum. Even if it’s not inside your company.
 The handover from H3 to H1 often fails because nobody owns it. H3 teams don’t know how to scale. H1 teams don’t want the risk.
 
 Appoint someone whose job is to push the idea through the funnel. Think of them as a “transition lead.” They don’t need to build the tech. But they do need to make sure it doesn’t get stuck.
+
+### Last thought
+
+You can’t force every Horizon 3 idea into Horizon 1. But you can increase the odds.
+
+Be ruthless about what’s worth pursuing. Create bridges early. And assign people who know how to bring things home.
+
+It’s not a straight line. But it’s doable.
+
+And sometimes, speed is just about deciding faster.

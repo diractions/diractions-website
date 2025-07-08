@@ -87,11 +87,15 @@
     <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
   </div>
   {{- end }}
-  {{- if not (.Param "hideMeta") }}
-  <footer class="entry-footer">
-    {{- partial "post_meta.html" . -}}
-  </footer>
-  {{- end }}
+    {{- if not (.Param "hideMeta") }}
+    <!-- Use the collapsible tags partial - different settings for list page -->
+    {{- partial "collapsible_tags.html" (dict "page" . "maxVisible" 3 "showOnMobile" 2) }}
+
+    <!-- Other Metadata Row -->
+    <footer class="entry-footer">
+        {{- partial "post_meta_card.html" . -}}
+    </footer>
+    {{- end }}
   <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
 </article>
 {{- end }}

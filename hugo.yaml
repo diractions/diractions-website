@@ -32,7 +32,7 @@ params:
     disableScrollToTop: false
     comments: false
     hidemeta: false
-    hideSummary: false
+    hideSummary: true # to hide summary in posts list. Individual posts can override this setting
     showtoc: true
     tocopen: true
 
