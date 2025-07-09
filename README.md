@@ -48,13 +48,23 @@ Two logo files are used:
 
 CSS handles visibility based on the body.dark class.
 
-## Custom CSS
+### Custom CSS
 
 - Branding elements according Diractions corporate style.
 
-## Collapsible card tags
+### Collapsible card tags
 
 - 
+
+## Common pitfalls and how to avoid them
+
+- Note that some elements in a Hugo generated website, like the footer, are cached. During the development of my new website, I've had to remove my local browser cache to see updates of such elements. Sometimes, you also have to restart the local Hugo dev server.
+- Don't modify the theme files directly. Always override theme files by copying them into your main project directory with the same relative path. This keeps your changes separate and upgrade-safe.
+- Hugo only overwrites or adds files during builds; it does not automatically remove deleted or draft content from the `public` directory. This can result in old or unintended pages being published. Use the `--cleanDestinationDir` flag when building (`hugo --cleanDestinationDir`) to ensure the output directory is cleared before new files are generated. Alternatively, manually delete the `public` directory before each build. You can integrate this within the CI/CD pipeline if needed.
+- I personally have always started the local dev server with these options: `hugo server --disableFastRender --noHTTPCache`. 
+- Hugo’s documentation and internal logic (layouts, archetypes, content types) can be confusing, especially for more complex site structures. Simple changes may require unexpectedly deep understanding. By the way, I am not using archetypes since I do all my Markdown editing within VSCode.
+- My advice is not to use Obsidian as Markdown editor for this specific purpose. Obsidian is my daily notetaking app, but it has some specifics on where to position images which you have to consider. This can be solved by using the [Megascript of Network Chuck](https://blog.networkchuck.com/posts/my-insane-blog-pipeline/). I am not using this approach. I'm using VSCode and the [Markdown All in One extension](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one).
+- Hugo’s templating language (Go templates) can be less intuitive than alternatives, especially for those used to JavaScript-based tools. Extending or customizing site behavior may feel constrained. My advice would be to leverage community snippets and templates. And leverage on vibe coding. I personally have set up a dedicated Space for this in my Perplexity Pro account.
 
 ## License
 

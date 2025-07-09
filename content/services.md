@@ -7,7 +7,7 @@ ShowBreadCrumbs: false
 hideMeta: true
 ---
 
-### Why I offer these services?
+## Why I offer these services?
 
 Many innovation efforts get stuck long before they deliver real-world value. These are the 5 blockers I see most often:
 
@@ -23,15 +23,15 @@ My services are built around helping organizations do exactly that — by aligni
 
 ---
 
-Here’s HOW I support innovation efforts that aim for real-world adoption and lasting value:
+## How I support innovation efforts that aim for real-world adoption and lasting value
 
 ### Opportunity Discovery & Customer Validation
 
-Many innovation efforts begin with vague assumptions about what the market needs — leading to wasted resources and slow traction. I help organizations uncover real opportunity by identifying meaningful signals, validating them across the value chain, and cutting through the noise of hype and generalities. Together, we explore unmet needs, emerging trends, and plausible future scenarios — translating them into actionable insights that guide strategy, product direction, and ecosystem positioning.
+Many innovation efforts begin with vague assumptions about what the market needs, leading to wasted resources and slow traction. I help organizations uncover real opportunity by identifying meaningful signals, validating them across the value chain, and cutting through the noise of hype and generalities. Together, we explore unmet needs, emerging trends, and plausible future scenarios — translating them into actionable insights that guide strategy, product direction, and ecosystem positioning.
 
 ### Innovation Pilots & Adoption Readiness
 
-Testing new ideas in real-world conditions is one of the hardest phases in the innovation lifecycle. I lead early-stage initiatives that validate assumptions, uncover adoption barriers, and assess feasibility in live environments. These pilots are designed to generate actionable learning while minimizing risk, helping teams move from exploration to informed execution. I often operate outside traditional business units — supporting market entry, new vertical exploration, or cross-functional growth projects.
+Testing new ideas in real-world conditions is one of the hardest phases in the innovation lifecycle. I lead early-stage initiatives that validate assumptions, uncover adoption barriers, and assess feasibility in live environments. These pilots are designed to generate actionable learning while minimizing risk, helping teams move from exploration to informed execution. I often operate outside traditional business units: supporting market entry, new vertical exploration, or cross-functional growth projects.
 
 ### Technical Assessment & Partnership Mapping
 

@@ -34,7 +34,7 @@ body.dark .logo-dark {
     --primary: #334F5C;
     --secondary: #964c4c;
     --tertiary: #4c9696;
-    --content: rgb(31, 31, 31);
+    --content: #334F5C;
     --code-block-bg: rgb(28, 29, 33);
     --code-bg: rgb(245, 245, 245);
     --border: #964c4c;
@@ -49,7 +49,7 @@ body.dark .logo-dark {
     --primary: #e3e3e3;
     --secondary: #964c4c;
     --tertiary: #4c9696;
-    --content: rgb(196, 196, 197);
+    --content: #e3e3e3;
     --code-block-bg: rgb(218, 218, 219);
     --code-bg: rgb(218, 218, 219);
     --border: #e3e3e3;
