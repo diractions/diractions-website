@@ -65,4 +65,4 @@ Less time in conference rooms or behind a desk, more time getting feedback that 
 
 Curious—have you seen this pattern too?
 
-What’s worked (or failed) in your experience aligning AI innovation with customer value?
+What’s worked (or failed) in your experience aligning AI innovation with customer value? [I am eager to connect with you and hear about your experiences.](#popup).

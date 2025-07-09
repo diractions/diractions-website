@@ -9,6 +9,9 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 
+pagination:
+  pagerSize: 6
+
 minify:
   disableXML: true
   minifyOutput: true
@@ -18,7 +21,7 @@ params:
     title: "Diractions Consulting"
     keywords: [Blog, Portfolio, Services]
     # author: "Harald Hagenaars"
-    defaultTheme: dark
+    defaultTheme: light
     disableThemeToggle: false
     ShowReadingTime: true # to show reading time at bottom of each post
     ShowShareButtons: false # to show Share Buttons at bottom of each post

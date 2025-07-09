@@ -98,3 +98,5 @@ Be ruthless about what’s worth pursuing. Create bridges early. And assign peop
 It’s not a straight line. But it’s doable.
 
 And sometimes, speed is just about deciding faster.
+
+Did you implement a 3 Horizon model in your organization? [I am eager to connect with you and hear about your experiences.](#popup)

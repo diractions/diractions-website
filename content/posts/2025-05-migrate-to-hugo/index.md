@@ -5,6 +5,7 @@ date: 2025-07-07
 tags:
   - WebDev
   - CMS
+  - Workflow-Automation
 draft: false
 hideMeta: false
 hideSummary: false

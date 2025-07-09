@@ -184,6 +184,7 @@ body.dark .logo-dark {
     max-width: 100% !important;
     max-height: none !important;
     object-fit: unset !important;
+    margin-bottom: 1rem;
 }
 
 figure.entry-cover {
@@ -196,7 +197,6 @@ figure.entry-cover {
 
 figure.entry-cover img {
   display: block;
-  margin: 0 auto;
 }
 
 figure.entry-cover figcaption {
@@ -354,4 +354,12 @@ sup.archive-count {
 .paginav a:hover {
     color: var(--tertiary-contrast);
     background: var(--tertiary);
+}
+
+.pagination .next {
+    margin-top: 1rem;
+}
+
+.pagination .prev {
+    margin-top: 1rem;
 }

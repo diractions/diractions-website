@@ -66,4 +66,46 @@ document.addEventListener('keydown', function(event) {
     if (popup) popup.style.display = 'none'; // Hide the popup
   }
 });
+
+/**
+ * Opens the social popup dialog
+ * Shows the popup by setting display to 'block'
+ */
+function openSocialPopup() {
+  const popup = document.getElementById('contact-popup');
+  if (popup) {
+    popup.style.display = 'block'; // Show the popup
+  }
+}
+
+function handleHash() {
+  if (window.location.hash === '#popup') {
+    openSocialPopup();
+  }
+}
+
+// Listen for hash changes and page load
+window.addEventListener('hashchange', handleHash);
+window.addEventListener('DOMContentLoaded', handleHash);
+
+// Prevent default link behavior for popup links and handle them manually
+document.addEventListener('DOMContentLoaded', function() {
+  // Find all links that point to #popup and handle them
+  const popupLinks = document.querySelectorAll('a[href="#popup"]');
+  
+  popupLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent default anchor behavior
+      openSocialPopup();
+      
+      // Update the URL hash without triggering a scroll
+      if (history.pushState) {
+        history.pushState(null, null, '#popup');
+      } else {
+        window.location.hash = '#popup';
+      }
+    });
+  });
+});
+
 </script>
