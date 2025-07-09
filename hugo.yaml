@@ -49,14 +49,17 @@ params:
           url: "https://outlook.office.com/bookwithme/user/7707e0a792da45c09c4ad255ec9e7fc8%40diractions.eu/meetingtype/1xCPAXDW9EyvUoRqSIpMDA2?anonymous&ismsaljsauthenabled=true"
         - name: Connect with Me
           url: "#popup"
-        - name: View My Work
-          url: "/projects/"
+        # - name: View My Work
+        #   url: "/projects/"
   
     socialIcons:
       - name: github
         url: "https://github.com/diractions"
       - name: linkedin
         url: "https://www.linkedin.com/in/haraldhagenaars"
+
+    chamberOfCommerce: "89287169"
+    vatNumber: "NL004712983B65"
 
 menu:
   main:
@@ -68,22 +71,18 @@ menu:
       name: Services
       url: /services/
       weight: 20
-    - identifier: projects
-      name: Projects
-      url: /projects/
-      weight: 30
     - identifier: faq
       name: FAQ
       url: /faq/
-      weight: 40
+      weight: 30
     - identifier: blog
       name: Blog
       url: /posts/
-      weight: 50
+      weight: 40
     - identifier: archives
       name: Archives
       url: /archives/
-      weight: 60
+      weight: 50
 
 outputs:
   home:
