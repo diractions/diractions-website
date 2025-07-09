@@ -54,7 +54,10 @@ CSS handles visibility based on the body.dark class.
 
 ### Collapsible card tags
 
-- 
+- I have enhanced my generated blog posts by adding collapsible card tags. I am using a Hugo partial (`collapsible_tags.html`) to display post tags in a compact, collapsible format. This approach is especially useful for posts with many tags, keeping the layout tidy and user-friendly.
+- How the partial works:
+  - Parameters: `maxVisible`: Maximum tags shown before collapsing (default: 3). `showOnMobile`: Maximum tags shown on mobile (default: 2).
+  - Behavior: If the number of tags exceeds `maxVisible`, only the first `maxVisible` tags are shown, and a “+N” button appears to reveal the rest. On mobile, the `showOnMobile` parameter controls how many tags are visible before collapsing.
 
 ## Common pitfalls and how to avoid them
 
