@@ -2,9 +2,25 @@
 title: "Services"
 date: 2025-06-30
 draft: false
-showtoc: false
+showtoc: true
 ShowBreadCrumbs: false
 hideMeta: true
+---
+
+### Why I offer these services?
+
+Many innovation efforts get stuck long before they deliver real-world value. These are the 5 blockers I see most often:
+
+1. Fuzzy problem framing: innovation often starts without a sharp understanding of the real-world problem, who faces it, and what value a solution brings.
+2. No path to adoption: pilots and demos abound — but few initiatives cross the chasm into daily use and scaled value.
+3. Misaligned roadmaps: tech, product, and business teams operate in silos, leading to uncoordinated development and missed opportunities.
+4. Isolated innovation: without portfolios, processes, or clear KPIs, innovation efforts stay stuck in corners of the org — never maturing into repeatable capability.
+5. Underused partnerships: valuable ecosystems and partners are overlooked or inconsistently engaged, limiting speed, reach, and co-creation potential.
+
+These blockers reflect a universal challenge: how to balance today’s business with tomorrow’s innovation. As Stanford’s James G. March put it: _"The basic problem confronting an organization is to engage in sufficient exploitation to ensure its current viability and, at the same time, devote enough energy to exploration to ensure its future viability."_
+
+My services are built around helping organizations do exactly that — by aligning teams, roadmaps, and ecosystems to make innovation stick.
+
 ---
 
 Here’s HOW I support innovation efforts that aim for real-world adoption and lasting value:

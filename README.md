@@ -4,7 +4,7 @@ This is the source code for the personal website of **Diractions Consulting**, b
 
 ---
 
-## 🧱 Tech Stack
+## Tech Stack
 
 - [Hugo](https://gohugo.io/) static site generator
 - [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme
@@ -15,59 +15,29 @@ This is the source code for the personal website of **Diractions Consulting**, b
 - Light/Dark mode support with dynamic logo switching
 - Minimal JS and CSS customizations for branding
 
-## 📁 Directory Structure
+## Directory Structure
 
 ```bash
 ├── content/                        # Pages and blog posts (Markdown)
-│   ├── about.md
+│   ├── about/
 │   ├── services.md
 │   ├── faq.md
+│   ├── archives.md
 │   └── posts/                      # Blog posts
 ├── static/                         # Static assets like images, logos
 │   └── images/
+│   └── js/                         # Custom JavaScript
 ├── layouts/                        # Custom layout overrides
 │   └── _partials/
 │       └── header.html             # Overridden header with dual-logo support
 │       └── index_profile.html      # Custom landing page
 │       └── socialpopup.html        # Social popup window
-├── assets/css/                     # Custom CSS
-│   └── diractions.css
+│   └── index.html                  # Landing page
+├── assets/css/extended             # Custom CSS
 ├── hugo.yaml                       # Site configuration
 ```
 
-## ⚙️ Getting Started
-
-### Prerequisites
-
-- Hugo Extended version 0.146.0 or later
-
-### Clone and Run Locally
-
-```bash
-git clone https://github.com/yourusername/diractions-website.git
-cd diractions-website
-hugo server --disableFastRender
-```
-
-## 🌐 Deployment
-
-You can deploy this site to:
-
-- GitHub Pages
-- Netlify
-- Cloudflare Pages
-- Vercel (via static output)
-- Or how I choose to deploy it on Hostinger using a Github webhook
-
-Build with:
-
-```bash
-hugo --minify
-```
-
-Output will be in the public/ directory.
-
-## 🖼️ Customizations
+## Customizations I've made on top of the PaperMod theme
 
 ### Dynamic Logo Switching (Dark/Light)
 
@@ -78,12 +48,14 @@ Two logo files are used:
 
 CSS handles visibility based on the body.dark class.
 
-## ✍️ Content Management
+## Custom CSS
 
-- Posts are in content/posts/
-- Pages are in content/about.md, services.md, faq.md, etc.
-- All content is in Markdown with YAML frontmatter.
+- Branding elements according Diractions corporate style.
 
-## 📄 License
+## Collapsible card tags
+
+- 
+
+## License
 
 This repository contains personal content and branding. Do not reuse text, logos, or styles without permission.
