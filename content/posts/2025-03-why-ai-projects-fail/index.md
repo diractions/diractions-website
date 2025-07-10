@@ -14,9 +14,8 @@ hideSummary: false
 showtoc: false
 ShowBreadCrumbs: false
 cover:
-  image: "emilipothese-R4WCbazrD1g-unsplash.jpg"
-  alt: "Unhappy metal vintage robot"
-  caption: "Photo by Emilpothèse on Unsplash"
+  image: "cover.png"
+  alt: "Robot hand meeting a human hand with puzzle pieces in the middle"
 ---
 
 Why do so many AI and robotics projects fail?

@@ -13,7 +13,7 @@ hideSummary: false
 showtoc: true
 ShowBreadCrumbs: false
 cover:
-  image: "1700842504512.jpg"
+  image: "cover.png"
   alt: "A street with busy traffic flow, whereas labels are put on top of the image to identify objects"
   caption: "Image generated with Dall-E 3"
 ---

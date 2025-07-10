@@ -14,7 +14,7 @@ hideSummary: false
 showtoc: true
 ShowBreadCrumbs: false
 cover:
-  image: "1699544516972.jpg"
+  image: "cover.png"
   alt: "A big lens installed on top of a self-driving vehicle with a calibration unit installed in front of the vehicle"
   caption: "Image generated with Dall-E 3"
 ---

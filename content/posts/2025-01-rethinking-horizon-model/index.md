@@ -1,5 +1,5 @@
 ---
-title: Rethinking the Horizon model? Here is what I tell clients
+title: Rethinking the Three Horizon model? Here is what I tell clients
 summary: How to move from early-stage innovation to business impact faster—without skipping the work. A practical take on using the Three Horizons model today.
 date: 2025-01-15
 tags: 
@@ -11,9 +11,8 @@ hideSummary: false
 showtoc: false
 ShowBreadCrumbs: false
 cover:
-  image: "andy-hermawan-O1jUvZX9DOA-unsplash.jpg"
-  alt: "Astronaut on rocket ship"
-  caption: "Photo by Andy Hermawan on Unsplash"
+  image: "cover.png"
+  alt: "A mountain range with several horizons in the distance"
 ---
 
 A managing director of one of my clients has asked me a good question:

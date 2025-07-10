@@ -14,7 +14,7 @@ hideSummary: false
 showtoc: true
 ShowBreadCrumbs: false
 cover:
-  image: "1699540644146.jpg"
+  image: "cover.png"
   alt: "A number of self driving vehicles and drones on platforms"
   caption: "Image generated with Dall-E 3"
 ---

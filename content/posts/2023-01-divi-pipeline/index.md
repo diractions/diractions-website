@@ -14,9 +14,9 @@ hideSummary: false
 showtoc: true
 ShowBreadCrumbs: false
 cover:
-  image: "1699288157444.jpg"
-  alt: "Raw sensor data of a depth camera (with a little bit of preprocessing)"
-  caption: "Raw sensor data of a depth camera (with a little bit of preprocessing)"
+  image: "cover.png"
+  alt: "Robot in a warehouse capturing lidar data"
+  caption: "Picture created with Dall-E 3"
 ---
 
 ## Introduction

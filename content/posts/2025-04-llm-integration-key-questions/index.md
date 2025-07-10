@@ -1,5 +1,5 @@
 ---
-title: "My process: key questions I raise when integrating LLMs into business workflows"
+title: "Key questions I raise when integrating LLMs into business workflows"
 summary: Here’s a look at the kinds of questions I raise with customers at the very start of any LLM integration project.
 date: 2025-06-29
 tags:
@@ -12,9 +12,8 @@ hideSummary: false
 showtoc: true
 ShowBreadCrumbs: false
 cover:
-  image: "emiliano-vittoriosi-fvxNerA8uk0-unsplash.jpg"
-  alt: "Laptop screen on the ChatGPT website"
-  caption: "Photo by Emiliano Vittoriosi on Unsplash"
+  image: "cover.png"
+  alt: "ChatGPT on phone"
 ---
 
 ## Introduction

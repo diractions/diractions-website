@@ -12,9 +12,8 @@ hideSummary: false
 showtoc: true
 ShowBreadCrumbs: false
 cover:
-  image: "carriza-maiquez-RTdvy9izXvw-unsplash.jpg"
-  alt: "Laptop with new website announcement"
-  caption: "Photo by Carriza Maiquez on Unsplash"
+  image: "cover.png"
+  alt: "Laptop with old Diractions website on it"
 ---
 
 ## I used to spend more time updating plugins than writing

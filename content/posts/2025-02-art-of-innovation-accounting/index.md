@@ -14,8 +14,8 @@ hideSummary: false
 showtoc: true
 ShowBreadCrumbs: false
 cover:
-  image: "robot-progress.png"
-  alt: "A robot on wheels whereas a business lady is measuring its progress"
+  image: "cover.png"
+  alt: "A hand putting post-its with a lightbulb on a whiteboard"
 ---
 
 ## The problem with cool ideas

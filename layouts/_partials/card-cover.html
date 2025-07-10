@@ -1,0 +1,4 @@
+{{ with .Resources.GetMatch (printf "*%s*" .Params.cover.image) }}
+    {{ $thumb := .Fit "318x200 center" }}
+    <img src="{{ $thumb.RelPermalink }}" width="318" height="200" alt="{{ $.Params.cover.alt | default $.Title }}" loading="lazy" class="card-cover-image">
+{{ end }}
