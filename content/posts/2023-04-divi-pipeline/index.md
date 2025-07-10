@@ -50,10 +50,10 @@ The endeavor to annotate data for autonomous vehicles encompasses a multitude of
 
 To achieve high fidelity in data annotation, several hybrid strategies are paramount:
 
-    Developing clear and comprehensive annotation guidelines based on consensus from domain experts.
-    Establishing a robust review and validation cycle that integrates both human expertise and automated checks to ensure annotation integrity.
-    Implementing a consensus pipeline that utilizes machine learning techniques to reconcile discrepancies among annotators.
-    Fostering an environment of continuous improvement through active feedback mechanisms and adaptive learning for annotators.
+- Developing clear and comprehensive annotation guidelines based on consensus from domain experts.
+- Establishing a robust review and validation cycle that integrates both human expertise and automated checks to ensure annotation integrity.
+- Implementing a consensus pipeline that utilizes machine learning techniques to reconcile discrepancies among annotators.
+- Fostering an environment of continuous improvement through active feedback mechanisms and adaptive learning for annotators.
 
 ## Data labeling today and tomorrow
 

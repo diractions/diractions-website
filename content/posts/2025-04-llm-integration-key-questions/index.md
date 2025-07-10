@@ -127,7 +127,7 @@ My goal is to share my process so you can learn from it and see what works in re
 - How will you track and control ongoing costs?
 - Are there licensing or subscription terms to consider?
 
-## Why These Questions Matter
+## Why these questions matter
 
 Starting with these questions helps me understand my client needs, risks, and opportunities. It also ensures that the LLM solution they want to build is practical, secure, and aligned with their business goals. By focusing on the answers, we can avoid common pitfalls and create a system that truly works.
 
