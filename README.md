@@ -14,6 +14,7 @@ This is the source code for the personal website of **Diractions Consulting**, b
   - Social popup window with contact info
 - Light/Dark mode support with dynamic logo switching
 - Minimal JS and CSS customizations for branding
+- Github Actions to upload changes to my website to my Hostinger account
 
 ## Directory Structure
 
