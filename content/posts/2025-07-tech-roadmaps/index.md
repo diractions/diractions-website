@@ -1,6 +1,6 @@
 ---
 title: "Why high-tech companies must rethink their technology roadmaps"
-summary: Discover how to align your technology roadmap with company vision, product strategy, and market changes. A must-read for CEOs and CTOs in high-tech."
+summary: Discover how to align your technology roadmap with company vision, product strategy, and market changes. A must-read for CEOs and CTOs in high-tech.
 date: 2025-07-18
 tags:
   - Technology-Roadmaps
