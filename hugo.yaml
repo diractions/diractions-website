@@ -48,18 +48,10 @@ params:
       imageWidth: 200 # custom size
       imageHeight: 267 # custom size
       buttons:
-        - name: Let's Talk
-          url: "https://outlook.office.com/bookwithme/user/7707e0a792da45c09c4ad255ec9e7fc8%40diractions.eu/meetingtype/1xCPAXDW9EyvUoRqSIpMDA2?anonymous&ismsaljsauthenabled=true"
-        - name: Connect with Me
+        - name: Contact Me
           url: "#popup"
         - name: View My Work
           url: "/projects/"
-  
-    socialIcons:
-      - name: github
-        url: "https://github.com/diractions"
-      - name: linkedin
-        url: "https://www.linkedin.com/in/haraldhagenaars"
 
     chamberOfCommerce: "89287169"
     vatNumber: "NL004712983B65"
