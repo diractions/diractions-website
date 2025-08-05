@@ -15,6 +15,12 @@ _June 2024 - June 2025_
 
 Tasked with enhancing a digital strategy (apps, websites, paper maps) for a travel agency, I developed a strategic roadmap for incorporating geographic data—maps, points of interest (POIs), and routes—into their digital channels. This included refining their GTM strategy and identifying key integration opportunities to create a seamless, data-enriched user experience, positioning them for long-term competitive advantage. This included working towards a longer term vision of integrating AI agents for smarter searching and automated booking.
 
+## Trailblazer and innovation manager at colab.nl
+
+_September 2024 - March 2025_
+
+I explored how tele-operated robots could add value in schools and healthcare. In schools, the robot enabled remote teaching by home-bound teachers. In healthcare, we tested roles like a reception assistant or a companion ("maatje"). This project was part of colab.nl—a user-driven innovation track focused on creating tech people actually use. By involving end users from the start, colab.nl aims to turn promising concepts into real-world solutions that are intuitive, inclusive, and impactful. Within this project, I was responsible for managing the tech core including the robot, front-end, and back-end.
+
 ## Driving AI Innovation in Autonomous Mobility Research
 
 _June 2024 - December 2024_
