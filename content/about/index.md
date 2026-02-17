@@ -31,7 +31,7 @@ If you’re looking to translate vision into traction — or traction into scale
 
 ## My Resume
 
-[Download my resume](cv-harald-hagenaars-q3-2025-en.pdf)
+[Download my resume](cv-harald-hagenaars-q1-2026-en.pdf)
 
 ## My Skills
 
